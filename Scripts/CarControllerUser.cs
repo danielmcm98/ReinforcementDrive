@@ -49,10 +49,10 @@ public class CarControllerUser : MonoBehaviour
         frontLeftWheelCollider.motorTorque = vertInput * driveForce;
         frontRightWheelCollider.motorTorque = vertInput * driveForce;
         breakingForceNow = isBreak ? breakingForce : 0f;
-        ApplyBreaking();
+        UseBreak();
     }
 
-    private void ApplyBreaking()
+    private void UseBreak()
     {
         frontRightWheelCollider.brakeTorque = breakingForceNow;
         frontLeftWheelCollider.brakeTorque = breakingForceNow;
